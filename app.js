@@ -35,7 +35,6 @@ app.get("/posts/:title", (req, res) => {
 
 	allPosts.forEach((post) => {
 		if (requestedParam === post.title.toLowerCase()) {
-			// for space, type '%20' in the url
 			res.render("post", {
 				postTitle: post.title,
 				postContent: post.body,
